@@ -29,7 +29,7 @@ apis: ['./routes/*.js'],
 
 const swaggerSpec = swaggerJSDoc(options);
 
-const setupSwagger = (app) => {
+const setupSwagger = (apps) => {
 apps.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 };
 
