@@ -2,8 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const apps = express();
 const setupSwagger = require ('./swagger');
-setupSwagger(app);
+setupSwagger(apps);
 
 
 dotenv.config();
