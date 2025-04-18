@@ -1,17 +1,13 @@
 const mongoose = require('mongoose');
 
 const ArtisanSchema = new mongoose.Schema({
-name: { type: String, required: true },
-specialty: { type: String, required: true },
-description: String,
-location: String,
-coordinates: {
-lat: Number,
-lng: Number
-},
-phone: String,
-email: String,
-image: String
+  name: { type: String, required: true },
+  specialty: { type: String, required: true },
+  description: { type: String, required: true },
+  ville: { type: String, required: true },
+  telephone: { type: String, required: true }
 });
 
-module.exports = mongoose.model('Artisan', ArtisanSchema);
+const Artisan = mongoose.model('Artisan', ArtisanSchema);
+
+module.exports = Artisan;
