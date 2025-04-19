@@ -6,7 +6,7 @@ email: { type: String, required: true, unique: true },
 password: { type: String, required: true },
 role: {
 type: String,
-enum: ['admin', 'artisan'],
+enum: ['admin', 'artisan','user'],
 default: 'artisan'
 },
 createdAt: {

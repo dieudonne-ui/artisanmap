@@ -3,6 +3,8 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const register = async (req, res) => {
+    console.log('Données reçues dans register:', req.body);
+
  const { name, email, password, role } = req.body;
  try {
  const existing = await User.findOne({ email });
